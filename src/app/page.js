@@ -1,4 +1,4 @@
-import PostList from "./_components/post-list";
+import PostList from "../components/post-list";
 import Sidebar from "./_components/sidebar";
 import TopicsBar from "./_components/topics-bar";
 
