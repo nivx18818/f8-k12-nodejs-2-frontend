@@ -1,4 +1,4 @@
-import FooterLinks from "../../../components/footer-links";
+import FooterLinks from "@/components/footer-links";
 import ReadingList from "./reading-list";
 import RecommendedTopics from "./recommended-topics";
 import StaffPicks from "./staff-picks";

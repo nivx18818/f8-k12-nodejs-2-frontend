@@ -5,7 +5,7 @@ function ArticleHeader({ post }) {
   return (
     <header className="mb-12">
       <ArticleLeading post={post} />
-      <HeaderActionBar />
+      <HeaderActionBar post={post} />
     </header>
   );
 }

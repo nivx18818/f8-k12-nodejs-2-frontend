@@ -1,4 +1,6 @@
-function HeaderActionBar() {
+import Link from "next/link";
+
+function HeaderActionBar({ post }) {
   return (
     <div className="flex items-center justify-between py-4 border-gray-200 border-y">
       <div className="flex items-center space-x-6">
@@ -68,7 +70,10 @@ function HeaderActionBar() {
             />
           </svg>
         </button>
-        <button className="text-gray-600 hover:text-gray-900">
+        <Link
+          href={`/posts/${post.slug}/edit`}
+          className="text-gray-600 hover:text-gray-900"
+        >
           <svg
             className="w-5 h-5"
             fill="none"
@@ -79,10 +84,10 @@ function HeaderActionBar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );
