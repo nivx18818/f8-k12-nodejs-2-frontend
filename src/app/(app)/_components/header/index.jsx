@@ -6,7 +6,9 @@ function Header() {
       <div className="px-6 py-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
-            <h1 className="text-2xl font-bold text-black">Medium</h1>
+            <Link href="/" className="text-2xl font-bold text-black">
+              Medium
+            </Link>
             <nav className="hidden md:flex items-center space-x-6">
               <a href="#" className="text-sm text-gray-600 hover:text-black">
                 Our story
@@ -14,7 +16,10 @@ function Header() {
               <a href="#" className="text-sm text-gray-600 hover:text-black">
                 Membership
               </a>
-              <Link href="/posts/create" className="text-sm text-gray-600 hover:text-black">
+              <Link
+                href="/posts/create"
+                className="text-sm text-gray-600 hover:text-black"
+              >
                 Write
               </Link>
               <a href="#" className="text-sm text-gray-600 hover:text-black">
