@@ -1,6 +1,6 @@
 function PostForm({ formAction, data = { slug: "", title: "", content: "" } }) {
   return (
-    <form id="post-form" action={formAction} className="space-y-8" method="POST">
+    <form id="post-form" action={formAction} className="space-y-8">
       {/* Slug Input */}
       <div>
         <label className="block mb-2 text-sm font-medium text-gray-700">
@@ -11,7 +11,6 @@ function PostForm({ formAction, data = { slug: "", title: "", content: "" } }) {
           name="slug"
           placeholder="url-friendly-slug"
           className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder-gray-400 bg-transparent font-[inherit]"
-          pattern="[a-z0-9-]+"
           title="Only lowercase letters, numbers, and hyphens allowed"
           required
           defaultValue={data.slug}

@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
+import { Slide, ToastContainer } from "react-toastify";
 import ArticleHeader from "./_components/article-header";
 import ArticleBody from "./_components/article-body";
 import ArticleFooter from "./_components/article-footer";
-import { Slide, ToastContainer } from "react-toastify";
 import DeletePostModal from "./_components/delete-post-modal";
 
 function PostDetail() {
@@ -26,15 +26,14 @@ function PostDetail() {
           `${process.env.NEXT_PUBLIC_BASE_API_URL}/posts/${slug}`
         );
         const res = await response.json();
-        if (res.success) return res.data;
-        throw new Error(res.message ?? "An error occurred");
+        if (res.success) setPost(res.data);
+        else throw new Error(res.message ?? "An error occurred");
       } catch (error) {
         console.error(error);
-        return null;
+        setPost(null);
       }
     };
-    const fetchedPost = fetchPostBySlug(slug);
-    setPost(fetchedPost);
+    fetchPostBySlug(slug);
   }, [slug]);
 
   if (!post) {
