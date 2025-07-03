@@ -30,7 +30,7 @@ function DeletePostModal({ handleDeletePost }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000070] text-gray-800">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 text-gray-800">
       <div className="p-6 bg-white rounded shadow-lg">
         <h2 className="mb-4 text-xl font-semibold">Delete Post</h2>
         <p className="mb-4">Are you sure you want to delete this post?</p>

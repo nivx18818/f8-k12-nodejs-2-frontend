@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function TopicsBar({ topics }) {
   return (
     <div className="border-b border-gray-200 bg-white sticky top-16 z-40">
@@ -7,13 +9,13 @@ function TopicsBar({ topics }) {
             Popular topics:
           </span>
           {topics?.slice(0, 6).map((topic) => (
-            <a
+            <Link
               key={topic.id}
-              href="#"
+              href={`topics/${topic.slug}`}
               className="text-sm text-gray-800 hover:text-black whitespace-nowrap"
             >
               {topic.title}
-            </a>
+            </Link>
           ))}
           <a
             href="#"
